@@ -140,25 +140,8 @@
                         <h3>Атрибуты</h3>
                         <p>
                             Атрибуты добавляют к тегам дополнительную информацию
+                            и всегда указываются в открывающем теге
                         </p>
-                        <pre><code data-trim class="html">
-&lt;a href="https://example.com" target="_blank"&gt;Ссылка на сайт&lt;/a&gt;
-                        </code></pre>
-                        <ul>
-                            <li>
-                                <code>href</code>
-                                указывает адрес ссылки
-                            </li>
-                            <li>
-                                <code>target="_blank"</code>
-                                открывает ссылку в новой вкладке
-                            </li>
-                        </ul>
-                    </section>
-                    <section data-auto-animate>
-                        <h1>Основные компоненты HTML</h1>
-                        <h3>Атрибуты</h3>
-                        <p>Они всегда указываются в открывающем теге</p>
                         <pre><code data-trim class="html">
 &lt;тег атрибут="значение"&gt;Содержимое&lt;/тег&gt;
                        </code></pre>
@@ -271,6 +254,10 @@
                         </ul>
                     </section>
                     <section>
+                        <h1>
+                            Структура
+                            <code>index.html</code>
+                        </h1>
                         <pre><code data-trim class="html">
 &lt;!DOCTYPE html&gt;
 &lt;html lang="ru"&gt;
@@ -307,39 +294,724 @@
                             </li>
                         </ul>
                     </section>
-
+                </section>
+                <section>
                     <section>
-                        <h1>Одиночные теги</h1>
-                        <h3>self-closing или самозакрывающиеся</h3>
+                        <h1>HTML тэги</h1>
+                        <h3>Виды тегов</h3>
+                        <h4>По позиции</h4>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="border-b">
+                                <h4>Блочные (block)</h4>
+                                <p>
+                                    создают новую строку и занимают всю ширину
+                                    родительского контейнера
+                                </p>
+                                <ul>
+                                    <li>
+                                        <code>&lt;div&gt;</code>
+                                        — универсальный контейнер
+                                    </li>
+                                    <li>
+                                        <code>&lt;p&gt;</code>
+                                        — абзац
+                                    </li>
+                                    <li>
+                                        <code>&lt;h1&gt;</code>
+                                        –
+                                        <code>&lt;h6&gt;</code>
+                                        — заголовки
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="border-b">
+                                <h4>Строчные (inline)</h4>
+                                <p>
+                                    не создают новую строку и занимают только
+                                    столько места, сколько требуется содержимому
+                                </p>
+                                <ul>
+                                    <li>
+                                        <code>&lt;span&gt;</code>
+                                        — универсальный контейнер
+                                    </li>
+                                    <li>
+                                        <code>&lt;a&gt;</code>
+                                        — ссылка
+                                    </li>
+                                    <li>
+                                        <code>&lt;img&gt;</code>
+                                        — изображение
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <h1>HTML тэги</h1>
+                        <h3>Виды тегов</h3>
+                        <h5>По функции</h5>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="border-b">
+                                <h4>Контейнерные (группирующие) теги</h4>
+                                <p>
+                                    Используются для структурирования контента и
+                                    создания макета страницы
+                                </p>
+                                <ul>
+                                    <li>
+                                        ...,
+                                        <code>&lt;div&gt;</code>
+                                        ,
+                                        <code>&lt;span&gt;</code>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="border-b">
+                                <h4>Гиперссылки и навигация</h4>
+                                <p>
+                                    Позволяют создавать ссылки и перемещаться
+                                    между страницами
+                                </p>
+                                <ul>
+                                    <li>
+                                        <code>&lt;a&gt;</code>
+                                        — основная ссылка
+                                    </li>
+                                    <li>
+                                        <code>&lt;link&gt;</code>
+                                        — подключение внешних файлов (CSS,
+                                        фавиконка)
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <h1>HTML тэги</h1>
+                        <h3>Виды тегов</h3>
+                        <h5>По функции</h5>
+                        <div class="border-b">
+                            <h4>Текстовые теги</h4>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div
+                                    style="
+                                        border-right: solid 2px var(--blue);
+                                        padding-right: 1rem;
+                                    ">
+                                    <p>
+                                        Используются для форматирования текста
+                                    </p>
+                                    <ul>
+                                        <li>
+                                            ...
+                                            <code>&lt;h1&gt; – &lt;h6&gt;</code>
+                                            ,
+                                            <code>&lt;p&gt;</code>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4>Форматирование текста</h4>
+                                    <p></p>
+                                    <ul>
+                                        <li>
+                                            <code>&lt;strong&gt;</code>
+                                            — жирный текст (важный)
+                                        </li>
+                                        <li>
+                                            <code>&lt;em&gt;</code>
+                                            — курсив (выделение)
+                                        </li>
+                                        <li>
+                                            <code>&lt;u&gt;</code>
+                                            — подчёркнутый текст
+                                        </li>
+                                        <li>
+                                            <code>&lt;s&gt;</code>
+                                            — зачёркнутый текст
+                                        </li>
+                                        <li>
+                                            <code>&lt;mark&gt;</code>
+                                            — выделение цветом
+                                        </li>
+                                        <li>
+                                            <code>&lt;small&gt;</code>
+                                            — уменьшенный текст
+                                        </li>
+                                        <li>
+                                            <code>
+                                                &lt;sub&gt; / &lt;sup&gt;
+                                            </code>
+                                            — нижний и верхний индекс
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <h1>HTML тэги</h1>
+                        <h3>Виды тегов</h3>
+                        <h5>По функции</h5>
+                        <div class="border-b">
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <h5>Изображения</h5>
+                                    <ul>
+                                        <li>
+                                            <code>&lt;img&gt;</code>
+                                            — вставка изображения
+                                        </li>
+                                        <li>
+                                            <code>&lt;picture&gt;</code>
+                                            — адаптивные изображения
+                                        </li>
+                                        <li>
+                                            <code>&lt;figure&gt;</code>
+                                            /
+                                            <code>&lt;figcaption&gt;</code>
+                                            — оформление изображений
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h5>Видео</h5>
+                                    <ul>
+                                        <li>
+                                            <code>&lt;video&gt;</code>
+                                            — вставка видео
+                                        </li>
+                                        <li>
+                                            <code>&lt;source&gt;</code>
+                                            — несколько форматов видео
+                                        </li>
+                                    </ul>
+                                    <hr />
+                                    <h5>Аудио</h5>
+                                    <ul>
+                                        <li>
+                                            <code>&lt;audio&gt;</code>
+                                            — вставка аудио
+                                        </li>
+                                        <li>
+                                            <code>&lt;source&gt;</code>
+                                            — альтернативные форматы аудио
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <h1>HTML тэги</h1>
+                        <h3>Виды тегов</h3>
+                        <h5>По функции</h5>
+                        <div class="border-b">
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <h5>Таблицы</h5>
+                                    <p>
+                                        Используются для представления табличных
+                                        данных
+                                    </p>
+                                    <ul>
+                                        <li>
+                                            <code>&lt;table&gt;</code>
+                                            — таблица
+                                        </li>
+                                        <li>
+                                            <code>&lt;tr&gt;</code>
+                                            — строка
+                                        </li>
+                                        <li>
+                                            <code>&lt;td&gt;</code>
+                                            — ячейка
+                                        </li>
+                                        <li>
+                                            <code>&lt;th&gt;</code>
+                                            — заголовочная ячейка
+                                        </li>
+                                        <li>
+                                            <code>&lt;thead&gt;</code>
+                                            ,
+                                            <code>&lt;tbody&gt;</code>
+                                            ,
+                                            <code>&lt;tfoot&gt;</code>
+                                            — разделы таблицы
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h5>Формы и ввод данных</h5>
+                                    <p>
+                                        Позволяют пользователям вводить данные
+                                    </p>
+                                    <ul>
+                                        <li>
+                                            <code>&lt;form&gt;</code>
+                                            — форма
+                                        </li>
+                                        <li>
+                                            <code>&lt;input&gt;</code>
+                                            — поле ввода
+                                        </li>
+                                        <li>
+                                            <code>&lt;textarea&gt;</code>
+                                            — многострочное поле
+                                        </li>
+                                        <li>
+                                            <code>&lt;button&gt;</code>
+                                            — кнопка
+                                        </li>
+                                        <li>
+                                            <code>&lt;select&gt;</code>
+                                            ,
+                                            <code>&lt;option&gt;</code>
+                                            — выпадающий список
+                                        </li>
+                                        <li>
+                                            <code>&lt;label&gt;</code>
+                                            — подпись к полю
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <h1>HTML тэги</h1>
+                        <h3>Виды тегов</h3>
+                        <h5>По функции</h5>
+                        <div class="border-b">
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <h5>Структурные и вспомогательные теги</h5>
+                                    <ul>
+                                        <li>
+                                            <code>&lt;br&gt;</code>
+                                            — перенос строки
+                                        </li>
+                                        <li>
+                                            <code>&lt;hr&gt;</code>
+                                            — горизонтальная линия
+                                        </li>
+                                        <li>
+                                            <code>&lt;wbr&gt;</code>
+                                            — возможный перенос слова
+                                        </li>
+                                        <li>
+                                            <code>&lt;details&gt;</code>
+                                            / &lt;summary&gt; — раскрывающийся
+                                            блок
+                                        </li>
+                                        <li>
+                                            <code>&lt;progress&gt;</code>
+                                            — индикатор выполнения
+                                        </li>
+                                        <li>
+                                            <code>&lt;meter&gt;</code>
+                                            — индикатор измерений
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h5>Скрипты и мета-информация</h5>
+                                    <ul>
+                                        <li>
+                                            <code>&lt;script&gt;</code>
+                                            — подключение JavaScript
+                                        </li>
+                                        <li>
+                                            <code>&lt;noscript&gt;</code>
+                                            — контент, если JS отключен
+                                        </li>
+                                        <li>
+                                            <code>&lt;meta&gt;</code>
+                                            — метаданные страницы
+                                        </li>
+                                        <li>
+                                            <code>&lt;title&gt;</code>
+                                            — заголовок страницы
+                                        </li>
+                                        <li>
+                                            <code>&lt;style&gt;</code>
+                                            — встроенные стили
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <h1>Метаинформация</h1>
                         <p>
-                            Некоторые теги не содержат контента и не требуют
-                            закрывающего тега
+                            данные о веб-странице, которые не отображаются
+                            напрямую в браузере, но используются для SEO,
+                            адаптивности, кодировки и интерактивности страницы
                         </p>
-                        <p>
-                            Например,
-                            <code>&lt;br&gt;</code>
-                            (разрыв строки),
-                            <code>&lt;hr&gt;</code>
-                            (горизонтальная линия),
-                            <code>&lt;img&gt;</code>
-                            (изображение)
-                        </p>
-                        <pre><code data-trim class="html">
-&lt;img src="image.jpg" alt="Описание изображения" /&gt;
-&lt;br /&gt;
+                        <ul>
+                            <li>
+                                <code>&lt;meta charset="UTF-8"&gt;</code>
+                                — кодировка.
+                            </li>
+                            <li>
+                                <code>&lt;meta name="viewport"&gt;</code>
+                                — адаптивность.
+                            </li>
+                            <li>
+                                <code>&lt;meta name="description"&gt;</code>
+                                — описание страницы (SEO).
+                            </li>
+                            <li>
+                                <code>&lt;meta property="og:image"&gt;</code>
+                                — картинка для соцсетей.
+                            </li>
+                        </ul>
+                        <div class="border-b">
+                            <h4>
+                                <code>meta</code>
+                                тэги указываются в теге
+                                <code>&lt;head&gt;...&lt;/head&gt;</code>
+                            </h4>
+                        </div>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h1>Атрибуты</h1>
+                        <h3>Глобальные атрибуты</h3>
+                        <div class="border-b">
+                            <h4>
+                                <code>id</code>
+                                (идентификатор элемента)
+                            </h4>
+                            <ul>
+                                <li>
+                                    Уникальный идентификатор для поиска элемента
+                                    в
+                                    <code>CSS</code>
+                                    и
+                                    <code>JavaScript</code>
+                                </li>
+                            </ul>
+                            <pre><code data-trim class="html">
+&lt;h1 id="main-title"&gt;Заголовок страницы&lt;/h1&gt;
                         </code></pre>
+                        </div>
+                        <br />
+                        <div class="border-b">
+                            <h4>
+                                <code>class</code>
+                                (класс элемента)
+                            </h4>
+                            <ul>
+                                <li>
+                                    Позволяет группировать элементы для
+                                    применения стилей
+                                </li>
+                            </ul>
+                            <pre><code data-trim class="html">
+&lt;p class="text-bold text-red"&gt;Этот текст выделен.&lt;/p&gt;
+                        </code></pre>
+                        </div>
+                    </section>
+                    <section>
+                        <h1>Атрибуты</h1>
+                        <h3>Глобальные атрибуты</h3>
+                        <div class="border-b">
+                            <h4>
+                                <code>style</code>
+                                (встроенные / inline стили)
+                            </h4>
+                            <ul>
+                                <li>Применение CSS-стилей прямо в HTML</li>
+                            </ul>
+                            <pre><code data-trim class="html">
+&lt;div style="color: blue; font-size: 18px;"&gt;Текст с синим цветом.&lt;/div&gt;
+                        </code></pre>
+                        </div>
+                        <br />
+                        <div class="border-b">
+                            <h4>
+                                <code>hidden</code>
+                                (скрытый элемент)
+                            </h4>
+                            <ul>
+                                <li>
+                                    Полностью скрывает элемент с веб-страницы
+                                </li>
+                            </ul>
+                            <pre><code data-trim class="html">
+                    &lt;p hidden&gt;Этот текст скрыт и не виден пользователю.&lt;/p&gt;
+                        </code></pre>
+                        </div>
+                    </section>
+                    <section>
+                        <h1>Атрибуты</h1>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="border-b">
+                                <h4>Глобальные атрибуты</h4>
+                                <ul>
+                                    <li>
+                                        <code>id</code>
+                                        — уникальный идентификатор элемента.
+                                    </li>
+                                    <li>
+                                        <code>class</code>
+                                        — для группировки элементов по классу.
+                                    </li>
+                                    <li>
+                                        <code>style</code>
+                                        — для встроенного CSS-оформления.
+                                    </li>
+                                    <li>
+                                        <code>title</code>
+                                        — всплывающая подсказка при наведении.
+                                    </li>
+                                    <li>
+                                        <code>hidden</code>
+                                        — скрывает элемент с веб-страницы.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="border-b">
+                                <h4>Специфические атрибуты</h4>
+                                <ul>
+                                    <li>
+                                        <code>href</code>
+                                        для
+                                        <code>&lt;a&gt;</code>
+                                        — адрес ссылки.
+                                    </li>
+                                    <li>
+                                        <code>src</code>
+                                        для
+                                        <code>&lt;img&gt;</code>
+                                        — путь к изображению.
+                                    </li>
+                                    <li>
+                                        <code>alt</code>
+                                        для
+                                        <code>&lt;img&gt;</code>
+                                        — альтернативный текст.
+                                    </li>
+                                    <li>
+                                        <code>value</code>
+                                        для
+                                        <code>&lt;input&gt;</code>
+                                        — значение поля ввода.
+                                    </li>
+                                    <li>
+                                        <code>target</code>
+                                        для
+                                        <code>&lt;a&gt;</code>
+                                        — способ открытия ссылки.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <h1>Атрибуты</h1>
+                        <h3>Работа с булевыми атрибутами</h3>
+                        <p>
+                            атрибуты, которые принимают значение true, если они
+                            указаны, и false, если отсутствуют
+                        </p>
+                        <div class="border-r">
+                            Им не нужно задавать значение
+                        </div>
+                        <pre><code data-trim class="html">
+&lt;input type="checkbox" checked /&gt;
+&lt;input type="text" disabled value="Недоступное поле" /&gt;
+                    </code></pre>
                     </section>
                 </section>
                 <section>
                     <section>
                         <h1>Семантика в HTML</h1>
                         <p>
-                            <b>Семантические теги</b>
-                            описывают не только внешний вид, но и значение
-                            контента
+                            теги, которые не просто структурируют контент, но и
+                            дают браузеру и поисковым системам понять смысловую
+                            нагрузку элементов
                         </p>
-                        <p>Важно для поисковых систем и доступности</p>
+                        <ul>
+                            <li>
+                                <code>&lt;header&gt;</code>
+                                — верхняя часть страницы
+                            </li>
+                            <li>
+                                <code>&lt;nav&gt;</code>
+                                — блок с навигацией
+                            </li>
+                            <li>
+                                <code>&lt;main&gt;</code>
+                                — основной контент
+                            </li>
+                            <li>
+                                <code>&lt;section&gt;</code>
+                                — раздел контента
+                            </li>
+                            <li>
+                                <code>&lt;aside&gt;</code>
+                                — боковая информация (сайдбар, рекламные блоки)
+                            </li>
+                            <li>
+                                <code>&lt;article&gt;</code>
+                                — самостоятельный блок (например, новостная
+                                статья)
+                            </li>
+                            <li>
+                                <code>&lt;footer&gt;</code>
+                                — подвал страницы
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <div class="grid grid-cols-2 gap-4">
+                            <pre><code data-trim class="html">
+&lt;div&gt;Заголовок страницы&lt;/div&gt;
+&lt;div&gt;Меню&lt;/div&gt;
+&lt;div&gt;
+    &lt;div&gt;
+        &lt;div&gt;Название статьи&lt;/div&gt;
+        &lt;div&gt;Содержание статьи...&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div&gt;Контактная информация&lt;/div&gt;
+                        </code></pre>
+                            <pre><code data-trim class="html">
+&lt;header&gt;Заголовок страницы&lt;/header&gt;
+&lt;nav&gt;Меню&lt;/nav&gt;
+&lt;main&gt;
+    &lt;article&gt;
+        &lt;h1&gt;Название статьи&lt;/h1&gt;
+        &lt;p&gt;Содержание статьи...&lt;/p&gt;
+    &lt;/article&gt;
+&lt;/main&gt;
+&lt;footer&gt;Контактная информация&lt;/footer&gt;
+                        </code></pre>
+                        </div>
+                    </section>
+                    <section>
+                        <h1>Примеры семантических тегов</h1>
+                        <div
+                            class="r-stretch border-b"
+                            style="
+                                display: grid;
+                                grid-template-columns: repeat(4, 1fr);
+                                grid-template-rows: repeat(4, 1fr);
+                                gap: 10px;
+                            ">
+                            <div
+                                class="border-y"
+                                style="grid-column: 1/2; grid-row: 1/5">
+                                <code>&lt;nav &gt;</code>
+                            </div>
+                            <div
+                                style="
+                                    display: flex;
+                                    flex-direction: column;
+                                    grid-column: 2/5;
+                                    grid-row: 1/5;
+                                    gap: 10px;
+                                "
+                                class="border-c">
+                                &lt;main&gt;
+                                <div style="" class="border-r">
+                                    &lt;header&gt;
+                                </div>
+                                <div
+                                    style="
+                                        display: flex;
+                                        flex-direction: column;
+                                        flex-grow: 1;
+                                        gap: 10px;
+                                    "
+                                    class="border-g">
+                                    &lt;section&gt;
+                                    <div class="border-b">&lt;article&gt;</div>
+                                    <div class="border-b">&lt;article&gt;</div>
+                                    <div class="border-b">&lt;article&gt;</div>
+                                    <div class="border-b">&lt;article&gt;</div>
+                                </div>
+                                <div class="border-o">&lt;footer&gt;</div>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <h1>Функция семантики</h1>
+                        <ul>
+                            <li>
+                                Улучшение SEO (поисковые системы лучше
+                                индексируют сайт).
+                            </li>
+                            <li>
+                                Повышение доступности (экранные читалки
+                                правильно озвучивают контент).
+                            </li>
+                            <li>
+                                Улучшение читаемости кода (разработчики быстрее
+                                понимают структуру).
+                            </li>
+                            <li>Упрощение поддержки и модификации кода.</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <pre><code data-trim class="html">
+&lt;div class="header"&gt;Заголовок&lt;/div&gt;
+&lt;div class="menu"&gt;Меню&lt;/div&gt;
+&lt;div class="content"&gt;
+    &lt;div class="article"&gt;
+        &lt;h1&gt;Название статьи&lt;/h1&gt;
+        &lt;p&gt;Текст статьи...&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="footer"&gt;Контакты&lt;/div&gt;
+                    </code></pre>
+                        <h4>Минусы кода</h4>
+                        <ul>
+                            <li>
+                                Поисковым системам и браузерам сложнее понять
+                                структуру страницы.
+                            </li>
+                            <li>
+                                Машинные алгоритмы не знают, где основное
+                                содержимое, а где навигация.
+                            </li>
+                            <li>
+                                Разработчику сложнее быстро разобраться в коде.
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <a href="https://codepen.io/pen/">Codepen.io</a>
+                        <pre><code data-trim class="html">
+.c1 {
+    background-color: #ff0000
+}
 
+.c2 {
+    background-color: #00ff00
+}
+
+.c3 {
+    background-color: #0000ff
+}
+
+.c4 {
+    background-color: #ffff00
+}
+
+.c5 {
+    background-color: #ff00ff
+}
+
+.c6 {
+    background-color: #00ffff
+}
+                        </code></pre>
                     </section>
                 </section>
             </div>
@@ -531,3 +1203,4 @@
         </script>
     </body>
 </html>
+
